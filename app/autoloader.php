@@ -7,6 +7,7 @@ class Autoloader{
         $class = strtolower($class_name);
         $class = 'class-'.$class;
         $file_name = $class.'.php';
+		$a="123";
         
         $file= THEME_PATH.DIRECTORY_SEPARATOR.'app'.DIRECTORY_SEPARATOR.'classes'.DIRECTORY_SEPARATOR.$file_name;
         
