@@ -1,0 +1,216 @@
+.factor-admin-pennel{
+    display: flex;
+}
+.button-primary{
+    background-color: #291b62 !important;
+    color: white;
+    padding: 2px 20px !important;
+    margin: 10px 0 !important;
+    border: none;
+}
+/*
+side bar
+*/
+.factor-admin-pennel .side-bar{
+    background-color: white;
+    height: 55rem;
+    width: 15%;
+    border-radius: 0 20px 20px 0 ;
+    box-shadow: rgba(0, 0, 0, 0.1) -8px 0 8px;
+    padding: 10px 0 0 10px;
+    z-index: 1;
+}
+.factor-admin-pennel .factor-admin-pennel-ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 30px 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.factor-admin-pennel .factor-admin-pennel-li{
+    float: right;
+    color:#291b62;
+    padding: 12px 0;
+    text-align: right;
+    border-radius: 10px ;
+    width: 97%;
+
+}
+.factor-admin-pennel .factor-admin-pennel-li:hover{
+    background-color: #291b62;
+    color: white;
+}
+.factor-admin-pennel .factor-admin-pennel-li:before{
+    content: 'a';
+    width: 8px;
+    background-color: #ffffff;
+    color: rgba(12, 12, 12, 0);
+    margin-left: 15px;
+    margin-right: -15px;
+    padding:5px 2px;
+    border-radius: 5px;
+}
+.factor-admin-pennel .factor-admin-pennel-li:hover:before{
+    background-color: #291b62;
+    color: rgba(12, 12, 12, 0);
+}
+.active-menu{
+    background-color: #291b62 !important;
+    color: white !important;
+}
+.active-menu:before {
+    background-color: #291b62!important;
+    color: rgba(12, 12, 12, 0) !important;
+}
+/*
+content
+*/
+.factor-admin-pennel .content{
+    background-color: #f5f7f9;
+    width: 65%;
+    padding: 10px 20px;
+    border-radius: 20px 0  0 20px;
+    z-index: 0;
+}
+.content-subheading {
+    display: flex;
+    justify-content: space-between;
+}
+.content-subheading .heading-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.content-subheading .heading-content i {
+    font-size:20px;
+    margin-left: 16px;
+}
+.save-all-setting {
+    position: fixed;
+    left: 70px;
+    bottom: 80px;
+    background-color: #291b62;
+    color: white;
+    padding: 5px 35px;
+    font-size: 15px;
+    border-radius: 7px;
+    display: none;
+}
+.save-all-setting p{
+    font-size: 15px;
+}
+/*widget Base*/
+.comma-heading-widgetbase{
+    border-bottom: 1px solid #2e00a4;
+    margin: 30px 0;
+    padding: 17px 0;
+    width: 80%;
+}
+.comma-heading-widgetbase span {
+    font-size: 16px;
+    font-weight: 600;
+}
+.comma-description-widgetbase {
+    font-size: 13px !important;
+    margin-top: 20px;
+}
+/*color picker widget*/
+.tpl-colorpicker-widget{
+    background-color: rgba(0, 0, 0, 0) !important;
+    width: 30px;
+    height: 31px;
+    border: none !important;
+}
+.tpl-colorpicker-widget-holder{
+    background-color: #f7f7f7;
+    border: 1px solid #7e7ed9;
+    display: flex;
+    width: 100px;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0;
+}
+.factor-admin-pennel h4{
+    font-size: 20px;
+}
+.factor-admin-pennel p{
+    font-size: 15px;
+}
+/*Accordion widget*/
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+.tpl-accordion-widget-holder .accordion{
+    text-align: right;
+}
+/*checkbox widget*/
+.radio-select-widget-admin {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* IMAGE STYLES */
+.radio-select-widget-admin + img {
+    cursor: pointer;
+}
+
+/* CHECKED STYLES */
+.radio-select-widget-admin:checked + img {
+    outline: 2px solid #2e00a4;
+    border-radius: 6px;
+}
+/*radiobuttonwithoutimg*/
+.comma-radio-button-without-img {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    background-color: #a8a8a8;
+    padding: 8px;
+    border-radius: 5px;
+}
+.comma-radio-button-without-img label{
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.comma-radio-button-without-img-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.comma-radio-button-without-img-input + span {
+    cursor: pointer;
+}
+/*selector widget*/
+.camma-select {
+    width: 230px;
+    background-color: #f5f5dc00 !important;
+    border: #a1a1a1 solid 1px !important;
+    border-radius: 5px !important;
+    padding: 3px 10px !important;
+}

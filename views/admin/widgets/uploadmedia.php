@@ -1,0 +1,1 @@
+<input class="tpl-uploadmedia-widget" type="file" name="<?= $name ?>">
