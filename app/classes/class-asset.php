@@ -1,18 +1,13 @@
 <?php
 class Asset{
-    public  function __construct($format,$filename,$handler=''){
-        switch($format){
-            case 'css':
+    public static function css ($filename,$handler=''){
                 wp_enqueue_style($handler, THEME_URL.'/assets/css/'.$filename, [], Version);
-            break;
-            case 'js':
+    }
+    public static function js ($filename,$handler=''){
                 wp_enqueue_script($handler, THEME_URL.'/assets/js/'.$filename, ['jquery'], Version);
-            break;    
-            case 'image':
+    }
+    public static function image ($filename){
                 $file_url=THEME_URL.'/assets/image/'.$filename;
                 echo $file_url;
-            break;
-        }
-
     }
 }

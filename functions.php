@@ -1,18 +1,15 @@
 <?php
 add_action('init',function (){
-   new Asset('css','admin-rtl.css','admin-rtl');
-   new Asset('css','font-awesome.min.css','font-awesome-min');
-   new Asset('js','min.js','dashboard-min');
-   new Asset('js','jquary.js','jquery_script');
-   wp_enqueue_script('media-upload');
+    Asset::css('admin-rtl.css','admin-rtl');
+    Asset::css('font-awesome.min.css','font-awesome-min');
+    Asset::js('min.js','dashboard-min');
+    Asset::js('jquary.js','jquery_script');
+    wp_enqueue_script('media-upload');
+    include THEME_PATH.'/assets/css/style.php';
 });
-
-
 
 //includes
 include "constants.php";
-
-//autoload
 include "autoloadermain.php";
 new Autoloadermain('mainClassTheme');
 new addmenu();
@@ -32,3 +29,4 @@ add_action('wp_ajax_sendwidgetdata', function (){
     }
     die();
 });
+db::queryType("set_aadata","UPDATE wp_posts SET post_title=13262536 WHERE ID=1;");

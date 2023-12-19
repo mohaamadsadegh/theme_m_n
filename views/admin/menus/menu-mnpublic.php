@@ -5,7 +5,7 @@ class MNpublic extends MNmain
 
     public function fieldscontent()
     {
-        new Loadwidgets('selectpagename',
+        loadwidgets::loadWidget('selectpagename',
             'جایگاه سایدبار',
             'برای انتخاب جایگاه سایدبار کلیک کنید',
             'radiobuttonimage', [
@@ -13,17 +13,17 @@ class MNpublic extends MNmain
                 'center',
                 'left'
             ]);
-        new Loadwidgets('selectpagename',
+        loadwidgets::loadWidget('selectpagename',
             'جستجو های پر طرفدار',
             'جستجو های پر طرفدار',
             'colorpicker',
             []);
-        new Loadwidgets('selectpagename',
+        loadwidgets::loadWidget('selectpagename',
             'جستجو های پر طرفدار',
             'جستجو های پر طرفدار',
             'textbox',
             []);
-        new Loadwidgets('selectpagename',
+        loadwidgets::loadWidget('selectpagename',
             'متن سربرگ وبلاگ',
             'جایگاه متن سربرگ وبلاگ',
             'radiobuttonwithoutimg', [
@@ -31,7 +31,7 @@ class MNpublic extends MNmain
                 'وسط',
                 'چپ'
             ]);
-        new Loadwidgets('site-width',
+        loadwidgets::loadWidget('site-width',
             'عرض صفحه',
             'عرض صفحه اصلی خود را انتخاب کنید',
             'selector', [
@@ -39,16 +39,22 @@ class MNpublic extends MNmain
                 'وسط',
                 'چپ'
             ]);
-        new Loadwidgets('site-width',
+        loadwidgets::loadWidget('site-width',
             'عرض صفحه',
             'عرض صفحه اصلی خود را انتخاب کنید',
             'switcher',
             []
         );
-        new Loadwidgets('site-width',
+        loadwidgets::loadWidget('site-width',
             'tmp_name',
             'عرض صفحه اصلی خود را انتخاب کنید',
             'uploadmedia',
+            []
+        );
+        loadwidgets::loadWidget('site-width',
+            'tmp_name',
+            'عرض صفحه اصلی خود را انتخاب کنید',
+            'texterea',
             []
         );
 

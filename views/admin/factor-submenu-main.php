@@ -11,9 +11,9 @@
 <br>
 <div class="factor-admin-pennel">
     <div class="side-bar">
-        <div class="logo">
-            <img src="" alt="">
-        </div>
+        <a href="<?= home_url(); ?>" class="logo">
+            <img src="<?php Asset::image('Logo.svg')?>" alt="">
+        </a>
         <ul class="factor-admin-pennel-ul">
             <!--            li menus in array for show in html-->
             <?php
