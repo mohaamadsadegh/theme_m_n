@@ -36,11 +36,11 @@ side bar
     text-align: right;
     border-radius: 10px ;
     width: 97%;
-
 }
 .factor-admin-pennel .factor-admin-pennel-li:hover{
     background-color: #291b62;
     color: white;
+    cursor: pointer;
 }
 .factor-admin-pennel .factor-admin-pennel-li:before{
     content: 'a';

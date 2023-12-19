@@ -8,11 +8,11 @@ class MNpublic extends MNmain
         new Loadwidgets('selectpagename',
             'جایگاه سایدبار',
             'برای انتخاب جایگاه سایدبار کلیک کنید',
-            'radiobuttonimage',[
+            'radiobuttonimage', [
                 'right',
                 'center',
                 'left'
-        ]);
+            ]);
         new Loadwidgets('selectpagename',
             'جستجو های پر طرفدار',
             'جستجو های پر طرفدار',
@@ -26,15 +26,7 @@ class MNpublic extends MNmain
         new Loadwidgets('selectpagename',
             'متن سربرگ وبلاگ',
             'جایگاه متن سربرگ وبلاگ',
-            'radiobuttonwithoutimg',[
-            'راست',
-            'وسط',
-            'چپ'
-        ]);
-        new Loadwidgets('site-width',
-            'عرض صفحه',
-            'عرض صفحه اصلی خود را انتخاب کنید',
-            'selector',[
+            'radiobuttonwithoutimg', [
                 'راست',
                 'وسط',
                 'چپ'
@@ -42,6 +34,25 @@ class MNpublic extends MNmain
         new Loadwidgets('site-width',
             'عرض صفحه',
             'عرض صفحه اصلی خود را انتخاب کنید',
-            'switcher',[]);
+            'selector', [
+                'راست',
+                'وسط',
+                'چپ'
+            ]);
+        new Loadwidgets('site-width',
+            'عرض صفحه',
+            'عرض صفحه اصلی خود را انتخاب کنید',
+            'switcher',
+            []
+        );
+        new Loadwidgets('site-width',
+            'tmp_name',
+            'عرض صفحه اصلی خود را انتخاب کنید',
+            'uploadmedia',
+            []
+        );
+
+
     }
+
 }
