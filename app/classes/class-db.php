@@ -2,7 +2,8 @@
 
 class db
 {
-    private static function mysqli()
+    private $name,$tbname,$condition,$value;
+    private function mysqli()
     {
         $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
@@ -11,14 +12,50 @@ class db
         return $mysqli;
     }
 
-    public static function queryType($type, $query)
+    public function query($type,$name='',$condition='',$tbname='',$value='')
     {
-        $result = self::mysqli()->query("$query");
-        if ($type == "get_data"){
-            return $result->fetch_all(MYSQLI_ASSOC);
-        }elseif($type != "set_data" && $type != "insert_data"){
-            echo "نوع کوئری به درستی انتخاب نشده";
+        $this->value=$value;
+        $this->name=$name;
+        $this->condition=$condition;
+        $this->tbname=$tbname;
+
+        if ($type=='deleteQuery' ||
+            $type=='insertQuery' ||
+            $type=='updateQuery' ||
+            $type=='getQuery')
+        {
+            return $this->$type();
+
+        }else{
             die();
         }
+    }
+
+    private function deleteQuery ()
+    {
+//        $query="DELETE FROM {$this->tbname} WHERE {$this->condition}";
+//        $this->mysqli()->query("$query");
+    }
+    private function insertQuery ()
+    {
+//        $query="INSERT INTO {$this->tbname} ({$this->name}) VALUES ({$this->value});";
+//        $this->mysqli()->query("$query");
+    }
+    private function updateQuery ()
+    {
+        $query="UPDATE {$this->tbname} set {$this->name}='{$this->value}' WHERE {$this->condition}";
+        $this->mysqli()->query("$query");
+    }
+    private function getQuery ()
+    {
+        $sql="SELECT {$this->name} FROM {$this->tbname} WHERE {$this->condition};";
+        $a=$this->mysqli()->query($sql);
+        return $a->fetch_all();
+    }
+    public function getQueryAdminSetting ($name)
+    {
+        $sql="SELECT data_value FROM wp_comma_admin WHERE data_name='$name';";
+        $a=$this->mysqli()->query($sql);
+        return $a->fetch_all();
     }
 }

@@ -2,7 +2,7 @@
 
 class Loadwidgets
 {
-    public static function loadWidget($id, $name, $description, $type, $options = [])
+    public static function loadWidget($id, $title, $description, $type, $name, $options = [])
     {
         if (isset($type)) {
             include THEME_admin_widgets . "widgetBase.php";

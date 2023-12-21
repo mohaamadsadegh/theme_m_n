@@ -21,12 +21,19 @@ add_action('wp_ajax_sendAjaxMenuName', function (){
     $Calldynamicmenu->returnContentMenu($_POST['menu_name']);
 die();
 });
+//Save data changed
+add_action('wp_ajax_adminchangeddata', function (){
+    $value=$_POST['changed_val'];
+    $name=$_POST['changed_name'];
+    $db = new db();
+    $db->query('updateQuery',"data_value","data_name='$name'",Database_Admin,$value);
+    die();
+});
 add_action('wp_ajax_sendwidgetdata', function (){
     if ($_SERVER['REQUEST_METHOD']=="POST"){
         if ($_POST['action']=="sendwidgetdata"){
-            print_r($_FILES);
+            echo $_FILES['file']['name'];
         }
     }
     die();
 });
-db::queryType("set_aadata","UPDATE wp_posts SET post_title=13262536 WHERE ID=1;");

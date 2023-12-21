@@ -88,8 +88,8 @@ content
 */
 .factor-admin-pennel .content {
     background-color: #f5f7f9;
-    width: 65%;
-    padding: 10px 20px;
+    width: 50%;
+    padding: 10px 40px;
     border-radius: 20px 0 0 20px;
     z-index: 0;
 }
@@ -114,12 +114,14 @@ content
     position: fixed;
     left: 70px;
     bottom: 80px;
-    background-color: #291b62;
-    color: white;
+    background-color: #ffffff;
+    color: #291b62;
+    border: solid 2px #291b62;
     padding: 5px 35px;
     font-size: 15px;
     border-radius: 7px;
     display: none;
+    font-weight: bold;
 }
 
 .save-all-setting p {
@@ -260,5 +262,7 @@ content
 }
 
 #url-file-uploader-widget {
-    width: 100%;
+    text-align: left;
+    width: 80%;
+    direction: ltr;
 }

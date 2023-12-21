@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -79,38 +79,26 @@
             }
         });
     });
-
-    $(".tpl-uploadmedia-widget").change(function (){
-        console.log($(this)[0].files[0]);
-        var formData = new FormData();
-        formData.append("file", $(this)[0].files[0]);
-        formData.append("action", "sendwidgetdata");
-            $.ajax({
-                url: '<?= admin_url('admin-ajax.php')?>',
-                type: 'POST',
-                data: formData,
-                contentType: false,
-                processData: false,
-                success:function (response){
-
-                }
-            });
-    });
-
-
-
-
     //Save data changed
     var timer;
-    $(".content-ajax input").click(function (event) {
+    $(".content-ajax input").change(function (event) {
         setTimeout(function (){
             $('.save-all-setting').show();
-        },1000);
+        },500);
         clearTimeout(timer);
         timer = setTimeout(() => {
-            console.log($(this).val());
+            $.ajax({
+                url: '<?= admin_url('admin-ajax.php')?>',
+                method: 'post',
+                type: 'html',
+                data: {
+                    action: "adminchangeddata",
+                    changed_val: $(this).val(),
+                    changed_name: $(this).attr('name')
+                }
+            });
             $('.save-all-setting').hide();
-        }, 10000);
+        }, 1000);
     });
 </script>
 </html>
