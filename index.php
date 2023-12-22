@@ -13,7 +13,7 @@ $site_title=$db->getQueryAdminSetting("commatitlesitemain");
 </head>
 <body>
 <div class="test-float">
-    <?=$site_title[0][0]?>
+    <?=$site_title->data_value?>
 </div>
 
 </body>

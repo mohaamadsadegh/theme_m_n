@@ -81,10 +81,8 @@
     });
     //Save data changed
     var timer;
-    $(".content-ajax input").change(function (event) {
-        setTimeout(function (){
-            $('.save-all-setting').show();
-        },500);
+    $(".content-ajax .comma-widget").change(function (event) {
+        $('.save-all-setting').show();
         clearTimeout(timer);
         timer = setTimeout(() => {
             $.ajax({
@@ -98,7 +96,7 @@
                 }
             });
             $('.save-all-setting').hide();
-        }, 1000);
+        }, 300);
     });
 </script>
 </html>

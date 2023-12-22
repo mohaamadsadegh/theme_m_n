@@ -6,7 +6,7 @@ $query=$db->query("getQuery",
     Database_Admin);
 ?>
 <span class="tpl-colorpicker-widget-holder">
-<input class="tpl-colorpicker-widget" value="<?= $query[0][0] ?>" type="color" name="<?= $name ?>">
+<input class="comma-widget tpl-colorpicker-widget" value="<?= $query->data_value ?>" type="color" name="<?= $name ?>">
     <span>انتخاب رنگ</span>
     </input>
 

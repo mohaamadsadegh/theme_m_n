@@ -1,6 +1,10 @@
+<?php
+$db=new db();
+$query=$db->getQueryAdminSetting($name);
+?>
 <input class="button-primary" type="button" id="button-uploader-widget" value="انتخاب فایل"><br>
-<input id="url-file-uploader-widget" placeholder="آدرس فایل" type="text">
-<input class="tpl-uploadmedia-widget" name="<?= $name ?>" type="file"><br>
+<input value="<?=$query->data_value?>" id="url-file-uploader-widget" placeholder="آدرس فایل" type="text">
+<input value="<?=$query->data_value?>" class="comma-widget tpl-uploadmedia-widget" name="<?= $name ?>" type="file"><br>
 
 
 <script>
@@ -19,8 +23,7 @@
             contentType: false,
             processData: false,
             success: function (response) {
-                var url = "C:/xampp/htdocs/cama-group.com/wp-content/themes/theme_m_n/assets/image/" + response;
-                $("#url-file-uploader-widget").val(url);
+                $("#url-file-uploader-widget").val(response);
             }
         });
     });

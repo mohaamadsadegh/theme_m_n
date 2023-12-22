@@ -1,5 +1,5 @@
-<select class="camma-select">
+<select class="camma-select comma-widget">
     <?php foreach ($options as $option=>$optionval):?>
-        <option value="<?=$optionval?>"><?=$optionval?></option>
+        <option class="comma-widget" value="<?=$optionval?>"><?=$optionval?></option>
     <?php endforeach;?>
 </select>

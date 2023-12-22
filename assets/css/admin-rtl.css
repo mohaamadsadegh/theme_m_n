@@ -9,6 +9,7 @@
     border: none;
 }
 
+
 .factor-admin-pennel .logo {
     display: flex;
     justify-content: center;
@@ -240,6 +241,10 @@ content
     opacity: 0;
     width: 0;
     height: 0;
+}
+.btn-checked{
+    background-color: #291b62 !important;
+    color:white;
 }
 
 .comma-radio-button-without-img-input + span {

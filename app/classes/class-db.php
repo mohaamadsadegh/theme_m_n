@@ -3,13 +3,11 @@
 class db
 {
     private $name,$tbname,$condition,$value;
-    private function mysqli()
+
+    private function wbdb()
     {
-        $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
-        $mysqli->set_charset(DB_CHARSET);
-
-        return $mysqli;
+        global $wpdb;
+        return $wpdb;
     }
 
     public function query($type,$name='',$condition='',$tbname='',$value='')
@@ -43,19 +41,17 @@ class db
     }
     private function updateQuery ()
     {
-        $query="UPDATE {$this->tbname} set {$this->name}='{$this->value}' WHERE {$this->condition}";
-        $this->mysqli()->query("$query");
+        $sql="UPDATE {$this->tbname} set {$this->name}='{$this->value}' WHERE {$this->condition}";
+        return $this->wbdb()->get_row("$sql");
     }
     private function getQuery ()
     {
         $sql="SELECT {$this->name} FROM {$this->tbname} WHERE {$this->condition};";
-        $a=$this->mysqli()->query($sql);
-        return $a->fetch_all();
+        return $this->wbdb()->get_row("$sql");
     }
     public function getQueryAdminSetting ($name)
     {
         $sql="SELECT data_value FROM wp_comma_admin WHERE data_name='$name';";
-        $a=$this->mysqli()->query($sql);
-        return $a->fetch_all();
+        return $this->wbdb()->get_row("$sql");
     }
 }
